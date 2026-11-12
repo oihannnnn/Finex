@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finex · Inversión en infraestructura digital europea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B1220;--ink2:#162033;--paper:#F2F4F7;--card:#fff;--line:#DDE2E9;--muted:#5B6676;--brass:#3E6FA8;--brass2:#8DB4E2;--good:#2A7F6B;--warn:#8A6A1F;--bad:#B23A48;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Inter,system-ui,sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.12}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+section{padding:96px 0}
+h2{font-size:clamp(30px,4vw,44px);margin:12px 0 16px}
+.sub{color:var(--muted);font-size:18px;max-width:640px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(14,27,44,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:Inter,system-ui,sans-serif;font-size:22px;letter-spacing:.01em}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.72);font-size:14px;transition:.2s}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:10px;padding:13px 22px;font:600 15px Inter,sans-serif;cursor:pointer;transition:.2s}
+.btn-brass{background:var(--brass);color:#fff}.btn-brass:hover{background:#315B8C}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)}.btn-ghost:hover{border-color:#fff}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:var(--ink2)}
+.btn:disabled{opacity:.5;cursor:wait}
+.nav-cta{padding:9px 16px;font-size:13px}
+
+/* HERO */
+.hero{background:var(--ink);color:#fff;padding:88px 0 96px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+ radial-gradient(900px 400px at 85% 0%,rgba(62,111,168,.30),transparent 60%),
+ linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/56px 56px,
+ linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/56px 56px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(38px,5.4vw,64px);color:#F5F8FC}
+.hero h1 em{font-style:normal;color:var(--brass2)}
+.hero p.lead{margin:24px 0 36px;font-size:19px;color:rgba(255,255,255,.76);max-width:540px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14)}
+.facts b{display:block;font:500 28px Inter,system-ui,sans-serif;color:var(--brass2)}
+.facts span{font-size:13px;color:rgba(255,255,255,.66)}
+.mock{background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.mock .tag{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.mock h3{font-size:22px;margin-bottom:6px}
+.mock .loc{font-size:14px;color:var(--muted);margin-bottom:18px}
+.mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.mrow div{background:var(--paper);border-radius:10px;padding:10px 12px}
+.mrow small{display:block;font-size:11px;color:var(--muted)}.mrow b{font-size:16px}
+.bar{height:8px;background:#E3E8EF;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--brass);border-radius:99px}
+.mock .cap{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:8px}
+.pill{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
+.pill.good{background:#E3F1EA;color:var(--good)}.pill.warn{background:#E9EEF5;color:var(--warn)}.pill.bad{background:#F6E1E1;color:var(--bad)}
+
+/* CARDS */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.card h3{font-size:22px;margin-bottom:10px}.card p{color:var(--muted);font-size:15px}
+.ico{width:42px;height:42px;border-radius:11px;background:#E6EDF6;display:grid;place-items:center;margin-bottom:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+.step{border-top:2px solid var(--ink);padding-top:20px}
+.step .n{font:500 40px Inter,system-ui,sans-serif;color:var(--brass)}
+.step h3{font-size:20px;margin:6px 0 8px}.step p{font-size:15px;color:var(--muted)}
+.dark{background:var(--ink);color:#fff}
+.dark .sub{color:rgba(255,255,255,.7)}
+.callout{margin-top:40px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:22px 26px;font-size:16px;color:rgba(255,255,255,.86)}
+.callout b{color:var(--brass2)}
+
+/* ANALIZADOR */
+.lab{background:#E8ECF1}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;margin-top:40px;box-shadow:0 12px 40px rgba(14,27,44,.06)}
+.picker{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.pick{border:1.5px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;background:#fff;text-align:left;font-family:inherit;transition:.2s}
+.pick:hover{border-color:var(--brass2)}
+.pick.on{border-color:var(--ink);box-shadow:0 0 0 3px rgba(14,27,44,.08)}
+.pick small{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.pick b{display:block;font:500 18px Inter,system-ui,sans-serif;margin-top:2px}
+label.l{font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:8px}
+textarea{width:100%;height:220px;border:1px solid var(--line);border-radius:12px;padding:16px;font:14px/1.6 Inter,sans-serif;color:var(--ink);background:#F8FAFC;resize:vertical}
+textarea:focus{outline:2px solid var(--brass2);border-color:transparent}
+.actions{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}
+.link{background:none;border:0;color:var(--brass);font:600 14px Inter,sans-serif;cursor:pointer;text-decoration:underline}
+.stepper{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.st{flex:1;min-width:200px;display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-size:14px;color:var(--muted);background:#fff}
+.st .dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.st.active{color:var(--ink);border-color:var(--brass)}.st.active .dot{border-color:var(--brass);animation:pulse 1.1s infinite}
+.st.done{color:var(--ink)}.st.done .dot{background:var(--good);border-color:var(--good);color:#fff}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(168,132,74,.2)}}
+.err{margin-top:20px;background:#F6E1E1;color:var(--bad);border-radius:12px;padding:16px 18px;font-size:14px}
+
+/* RESULTADOS */
+#results{margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
+.verdict{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:var(--ink);color:#fff;border-radius:16px;padding:28px 32px}
+.ring{width:120px;height:120px}
+.ring-bg{fill:none;stroke:rgba(255,255,255,.12);stroke-width:10}
+.ring-fg{fill:none;stroke-width:10;stroke-linecap:round}
+.ring-n{fill:#fff;font:600 34px Inter,system-ui,sans-serif;text-anchor:middle}
+.ring-s{fill:rgba(255,255,255,.6);font:12px Inter,sans-serif;text-anchor:middle}
+.verdict h3{font-size:28px;color:#F5F8FC}.verdict .meta{color:rgba(255,255,255,.65);font-size:14px;margin:4px 0 12px}
+.dec{display:inline-block;padding:6px 14px;border-radius:99px;font-weight:600;font-size:13px}
+.dec.good{background:#2F7D5B}.dec.warn{background:#B7791F}.dec.bad{background:#B23A3A}
+.kpis{display:grid;grid-template-columns:repeat(2,auto);gap:14px 30px}
+.kpis small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.kpis b{font:500 22px Inter,system-ui,sans-serif;color:var(--brass2)}
+.alert{margin-top:14px;background:#E9EEF5;color:#7A5413;border-radius:12px;padding:14px 18px;font-size:14px}
+.tabs{display:flex;gap:6px;margin:28px 0 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tab{background:none;border:0;padding:12px 18px;font:600 14px Inter,sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab.on{color:var(--ink);border-color:var(--brass)}
+.rb{display:grid;grid-template-columns:230px 1fr;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.rb:last-child{border:0}
+.rb h4{font:600 15px Inter,sans-serif}.rb h4 span{font-weight:500;color:var(--muted);font-size:12px;margin-left:6px}
+.meter{display:flex;align-items:center;gap:14px}
+.meter .bar{flex:1;height:10px}.meter b{font:600 15px Inter,sans-serif;min-width:34px;text-align:right}
+.rb p{grid-column:2;font-size:14px;color:var(--muted)}
+.flags{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:#F8FAFC}
+.box h4{font:600 14px Inter,sans-serif;margin-bottom:10px}
+.box.red{background:#FBF1F1;border-color:#EBCFCF}.box.red h4{color:var(--bad)}
+.box ul{list-style:none}.box li{position:relative;padding:5px 0 5px 20px;font-size:14px}
+.box li:before{content:"";position:absolute;left:2px;top:13px;width:7px;height:7px;border-radius:50%;background:var(--brass)}
+.box.red li:before{background:var(--bad)}
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fc{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:#fff}
+.fc h4{font:600 11px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin-bottom:10px}
+.fc dl div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:14px;border-bottom:1px dashed #EEE9DD}
+.fc dl div:last-child{border:0}.fc dt{color:var(--muted)}.fc dd{font-weight:500;text-align:right}
+.memo{max-width:820px;border:1px solid var(--line);border-radius:12px;padding:34px 40px;background:#fff}
+.memo-h{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:22px}
+.memo h4{font:600 12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin:22px 0 8px}
+.memo p{font-size:15px}.memo .reco{background:var(--paper);border-left:3px solid var(--brass);padding:14px 18px;border-radius:0 10px 10px 0;font-weight:500}
+.memo ul{margin-left:18px;font-size:15px}.memo li{margin:4px 0}
+.listing{max-width:860px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 10px 40px rgba(14,27,44,.08)}
+.l-top{background:linear-gradient(135deg,var(--ink),var(--ink2));color:#fff;padding:30px 34px}
+.l-top h3{font-size:30px;color:#F5F8FC;margin:10px 0 8px}.l-top p{color:rgba(255,255,255,.76);max-width:620px}
+.l-facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.l-facts div{padding:18px 22px;border-right:1px solid var(--line)}.l-facts div:last-child{border:0}
+.l-facts small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.l-facts b{font:500 22px Inter,system-ui,sans-serif}
+.l-body{padding:28px 34px}
+.l-body h4{font:600 12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin:22px 0 8px}
+.l-body h4:first-child{margin-top:0}
+.risk{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.risk div{border:1px solid var(--line);border-radius:12px;padding:16px;background:#F8FAFC}.risk b{display:block;font-size:14px;margin-bottom:4px}.risk span{font-size:13px;color:var(--muted)}
+.disc{margin-top:24px;background:#EDF1F6;border-radius:12px;padding:16px 18px;font-size:12.5px;color:#4A5668}
+.l-cta{padding:0 34px 30px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.l-cta small{color:var(--muted);font-size:12px}
+.rejected{max-width:700px;border:1px solid #EBCFCF;background:#FBF1F1;border-radius:14px;padding:28px 30px}
+.rejected h3{font-size:22px;color:var(--bad);margin-bottom:8px}
+
+footer{background:var(--ink);color:rgba(255,255,255,.62);padding:48px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer p{max-width:620px}
+
+@media(max-width:900px){
+ .hero .wrap,.grid3,.steps,.fg,.flags,.picker,.risk{grid-template-columns:1fr}
+ .nav-links a:not(.btn){display:none}
+ .verdict{grid-template-columns:1fr;text-align:left}.l-facts{grid-template-columns:1fr 1fr}
+ .rb{grid-template-columns:1fr}.rb p{grid-column:1}.memo{padding:24px}
+ section{padding:64px 0}
+}
+@media print{
+ body>*:not(main),main>*:not(#lab){display:none!important}
+ #lab{padding:0;background:#fff}#lab .panel{border:0;box-shadow:none;padding:0}
+ .picker,textarea,.actions,.stepper,label.l,#lab .eyebrow,#lab h2,#lab .sub,.tabs{display:none!important}
+ .tabpane{display:block!important;margin-top:20px}
+}
+.pubrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}.empty{padding:40px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);text-align:center;background:#fff}</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap">
+  <a href="#top" class="logo">
+   <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="5.5" rx="1.5" fill="#8DB4E2"/><rect x="3" y="10.5" width="20" height="5.5" rx="1.5" fill="#3E6FA8"/><rect x="3" y="18" width="20" height="5" rx="1.5" fill="#2B4F7A"/></svg>
+   Finex
+  </a>
+  <div class="nav-links">
+   <a href="#plataforma">Plataforma</a><a href="#como">Cómo funciona</a><a href="#proyectos">Proyectos</a>
+   <a href="#proyectos" class="btn btn-brass nav-cta">Ver proyectos</a>
+  </div>
+ </div>
+</nav>
+
+<main id="top">
+<header class="hero">
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">Infraestructura digital · Europa</div>
+   <h1 style="margin-top:16px">La infraestructura de la era de la IA, <em>al alcance de todos los inversores.</em></h1>
+   <p class="lead">Cofinanciamos centros de datos regionales y abrimos tramos de inversión desde 1.000 €. Cada proyecto llega con un análisis de riesgo estandarizado y explicado en lenguaje claro.</p>
+   <div class="ctas">
+    <a href="#proyectos" class="btn btn-brass">Ver proyectos abiertos</a>
+    <a href="#como" class="btn btn-ghost">Cómo funciona</a>
+   </div>
+   <div class="facts">
+    <div><b>1.000 €</b><span>Ticket mínimo por inversor</span></div>
+    <div><b>6 factores</b><span>de riesgo evaluados por proyecto</span></div>
+    <div><b>Condicionado</b><span>la inversión solo se activa si se cubre la ronda</span></div>
+   </div>
+  </div>
+  <div class="mock" aria-label="Ejemplo ilustrativo de anuncio">
+   <div class="tag"><span>Ejemplo ilustrativo</span><span>Datos simulados</span></div>
+   <h3>Tramo mezzanine · Centro de datos regional</h3>
+   <div class="loc">Castilla-La Mancha, España · 10 MW IT</div>
+   <div class="mrow"><div><small>Tramo</small><b>2,5 M€</b></div><div><small>Ticket mín.</small><b>1.000 €</b></div><div><small>Categoría</small><b>Buena</b></div></div>
+   <div class="bar"><i style="width:62%"></i></div>
+   <div class="cap"><span>62 % de la ronda reservada</span><span>Quedan 12 días</span></div>
+   <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap"><span class="pill good">Acceso a red concedido</span><span class="pill good">Contrato 12 años</span><span class="pill warn">Rentabilidad no garantizada</span></div>
+  </div>
+ </div>
+</header>
+
+<section id="plataforma">
+ <div class="wrap">
+  <div class="eyebrow">El problema</div>
+  <h2>Los centros de datos necesitan capital. El pequeño inversor no tiene acceso a ellos.</h2>
+  <p class="sub">La demanda de capacidad de cómputo crece más deprisa que la financiación disponible. Esa brecha es nuestro mercado.</p>
+  <div class="grid3">
+   <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="#3E6FA8" stroke-width="1.8"><rect x="3" y="4" width="16" height="5" rx="1"/><rect x="3" y="12" width="16" height="5" rx="1"/></svg></div><h3>Para promotores</h3><p>Capital minoritario adicional para completar rondas de financiación, con un proceso ordenado y condiciones negociadas por adelantado.</p></div>
+   <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="#3E6FA8" stroke-width="1.8"><path d="M3 17l5-6 4 3 7-9"/></svg></div><h3>Para inversores</h3><p>Acceso desde 1.000 € a una clase de activo hasta ahora reservada a grandes fondos, con los riesgos explicados sin jerga.</p></div>
+   <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="#3E6FA8" stroke-width="1.8"><path d="M11 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/></svg></div><h3>Análisis estandarizado</h3><p>Cada proyecto pasa por nuestro análisis interno antes de publicarse. Solo publicamos los que superan nuestros criterios de riesgo.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="como" class="dark">
+ <div class="wrap">
+  <div class="eyebrow">Cómo funciona</div>
+  <h2>De la negociación a la inversión en cuatro pasos</h2>
+  <p class="sub">Un proceso simple para el inversor y riguroso para nosotros.</p>
+  <div class="steps">
+   <div class="step"><div class="n">01</div><h3>Negociamos el tramo</h3><p>Acordamos con el promotor una participación minoritaria, en deuda, capital o mixta.</p></div>
+   <div class="step"><div class="n">02</div><h3>Analizamos el proyecto</h3><p>Clasificamos seis factores de riesgo en cuatro categorías, con criterios inspirados en los que usan los bancos para financiar proyectos, y detectamos incoherencias en la documentación del promotor.</p></div>
+   <div class="step"><div class="n">03</div><h3>Publicamos el anuncio</h3><p>Descripción clara, categoría de riesgo visible y los tres riesgos principales explicados.</p></div>
+   <div class="step"><div class="n">04</div><h3>Los inversores cubren el tramo</h3><p>Entre muchos inversores se completa la parte adquirida. Cobramos una comisión por el servicio.</p></div>
+  </div>
+  <div class="callout"><b>Compromiso condicionado.</b> El acuerdo con el promotor solo se activa si la ronda se cubre dentro del plazo. Si no se completa, no se invierte nada y no asumimos el tramo en nuestro balance.</div>
+ </div>
+</section>
+
+<section id="proyectos" class="lab"><div class="wrap"><div class="eyebrow">Proyectos</div><h2>Rondas abiertas</h2><p class="sub">Cada proyecto se publica tras el análisis interno de Finex. Lee los riesgos antes de decidir.</p><div id="lista" style="margin-top:40px;display:grid;gap:28px"></div></div></section>
+
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="logo" style="font-size:18px">Finex</div>
+  <p>Prototipo desarrollado en un hackatón de finanzas e IA. Todos los proyectos, datos y cifras mostrados son simulados. Este sitio no constituye asesoramiento financiero ni oferta de inversión. Invertir conlleva riesgo de pérdida total o parcial del capital.</p>
+ </div>
+</footer>
+
+<script>const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const n1=v=>Number(v).toLocaleString('es-ES',{maximumFractionDigits:1}),eur=v=>v==null?'—':n1(v)+'\u00a0M€';
+const tone=n=>n>=75?'good':n>=55?'warn':'bad',nivel=n=>n>=75?'Bajo':n>=55?'Moderado':'Alto';
+const CT={Fuerte:'good',Buena:'good',Satisfactoria:'warn'},ctone=c=>CT[c]||'bad',fp=v=>Number(v).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:2});
+function card(a){const x=a.anuncio||{};return `<article class="listing"><div class="l-top"><span class="pill ${a.categoria?ctone(a.categoria):tone(a.nota)}" style="background:rgba(255,255,255,.14);color:#fff">${a.categoria?'Categoría de riesgo: '+esc(a.categoria):'Riesgo '+nivel(a.nota)}</span><h3>${esc(x.titulo)}</h3><p>${esc(x.entradilla)}</p></div>
+<div class="l-facts"><div><small>Tramo</small><b>${eur(a.tramo)}</b></div><div><small>Rentab. de referencia (no garantizada)</small><b>${a.rango?fp(a.rango[0])+'–'+fp(a.rango[1])+'&nbsp;%':'—'}</b></div><div><small>Ticket mínimo</small><b>1.000&nbsp;€</b></div><div><small>Construcción</small><b>${a.plazo!=null?esc(a.plazo)+'&nbsp;meses':'—'}</b></div></div>
+<div class="l-body"><h4>Uso de los fondos</h4><p>${esc(x.uso_de_fondos)}</p><h4>Por qué esta categoría de riesgo</h4><p>${esc(x.por_que_esta_categoria||x.por_que_esta_nota)}</p><h4>Los tres riesgos principales</h4><div class="risk">${(x.riesgos||[]).map(r=>`<div><b>${esc(r.titulo)}</b><span>${esc(r.explicacion)}</span></div>`).join('')}</div>
+<h4>Cómo funciona la ronda</h4><p>Tu inversión solo se activa si la ronda completa se cubre dentro del plazo. Si no se alcanza el objetivo, no se invierte nada.</p>
+<div class="disc"><b>Aviso importante.</b> Invertir en proyectos de infraestructura conlleva riesgo de pérdida total o parcial del capital. El rango de rentabilidad es una referencia orientativa y no está garantizado. La categoría de riesgo es una clasificación interna y no sustituye a una calificación crediticia. Este contenido es una simulación y no constituye asesoramiento financiero ni oferta de inversión.</div></div>
+<div class="l-cta"><button class="btn btn-ink" disabled style="opacity:.55;cursor:not-allowed">Reservar interés</button><small>Disponible próximamente</small></div></article>`}
+(async()=>{let l=[];try{l=await(await fetch('/api/anuncios')).json()}catch(e){}$('#lista').innerHTML=l.length?l.map(card).join(''):'<div class="empty">No hay proyectos abiertos en este momento.</div>'})();
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+DOSSIER DE FINANCIACIÓN - CENTRO DE DATOS "DATANOVA HENARES"
+
+1. PROMOTOR
+DataNova Infraestructuras S.L., constituida en 2014. Ha desarrollado y operado dos centros de datos regionales
+(Valladolid, 4 MW, y Zaragoza, 6 MW), ambos en operación desde hace más de 5 años con ocupación superior al 90 %.
+
+2. PROYECTO
+Centro de datos de 10 MW de potencia IT en Guadalajara (Castilla-La Mancha), parcela de 3,2 ha de suelo industrial
+ya urbanizado y de propiedad del promotor. Refrigeración con circuito cerrado de bajo consumo de agua. Objetivo PUE 1,3.
+
+3. ENERGÍA
+Acceso y conexión a la red de distribución CONCEDIDOS por el gestor de red en marzo de 2026 para 12 MW (10 MW IT
+más margen). Subestación propia de 20 MVA contratada. Contrato de suministro renovable (PPA) a 10 años para el 70 % del consumo.
+
+4. PERMISOS
+Licencia urbanística concedida (febrero 2026). Declaración de impacto ambiental favorable (abril 2026).
+Autorización administrativa de la instalación eléctrica concedida.
+
+5. CLIENTE FINAL
+CloudIbérica S.A., proveedor cloud con facturación de 310 M EUR y beneficios en los últimos 4 años.
+Contrato firmado de 12 años, tipo take-or-pay por el 85 % de la capacidad (8,5 MW), con indexación a inflación.
+Potencia contratada: 10 MW IT, coherente con la memoria técnica.
+
+6. CONSTRUCCIÓN
+Constructor: Ingeniería Meridiano S.A., con 6 centros de datos construidos en España y Portugal en los últimos 8 años.
+Contrato llave en mano a precio cerrado. Plazo: 18 meses. Contingencia presupuestaria del 9 %.
+
+7. FINANCIACIÓN
+Presupuesto total: 48 M EUR.
+- Deuda senior bancaria: 26 M EUR (compromiso firmado).
+- Capital aportado por el promotor: 12 M EUR (ya desembolsado el 40 %).
+- Ronda alternativa (deuda mezzanine): 10 M EUR, de los cuales se ofrece a la plataforma un tramo minoritario de 2,5 M EUR.
+Rentabilidad ofrecida al tramo: 8,5 % anual. Ratio de cobertura del servicio de la deuda (DSCR) proyectado: 1,45x.
+Garantías: prenda sobre acciones de la sociedad del proyecto y cesión de los derechos del contrato con el cliente.

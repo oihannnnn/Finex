@@ -1,0 +1,30 @@
+DOSSIER DE FINANCIACIÓN - "MEGA AI HUB CUENCA"
+
+1. PROMOTOR
+MegaAI Holdings S.L., constituida hace 6 meses. Sin proyectos previos. Socios fundadores procedentes del sector inmobiliario.
+
+2. PROYECTO
+Centro de datos de IA de 40 MW de potencia IT en las afueras de Cuenca. Terreno rústico en proceso de recalificación
+a suelo industrial (sin fecha de resolución). Se prevé uso intensivo de GPUs de última generación.
+
+3. ENERGÍA
+No se ha presentado solicitud de acceso a la red. El promotor afirma que "la conexión será una formalidad" y que
+conseguirá la potencia mediante acuerdos privados con terceros, sin documentar.
+
+4. PERMISOS
+Ninguno concedido. Licencia urbanística no solicitada. Estudio ambiental pendiente de encargar.
+
+5. CLIENTE FINAL
+Cartas de intención no vinculantes de dos empresas tecnológicas emergentes, sin contrato firmado ni compromiso
+de capacidad. Una de ellas fue constituida hace 3 meses.
+
+6. CONSTRUCCIÓN
+Sin constructor seleccionado. Plazo estimado: 8 meses. Sin contingencia.
+
+7. FINANCIACIÓN
+Presupuesto total: 30 M EUR para 40 MW (el promotor indica que el precio por MW "se reducirá por escala").
+- Deuda senior: no hay compromiso de ninguna entidad.
+- Capital del promotor: 1 M EUR.
+- Ronda alternativa: 29 M EUR, tramo ofrecido a la plataforma: 5 M EUR.
+Rentabilidad ofrecida: 18 % anual "garantizada". DSCR: no calculado.
+Garantías: ninguna específica; el promotor ofrece "su reputación y la del sector de la IA".
