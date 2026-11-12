@@ -1,14 +1,12 @@
-FINEX - web publica + panel interno (agente analista de data centers)
-
-LOCAL:   pip install -r requirements.txt ; define ANTHROPIC_API_KEY ; python server.py
-         Web: http://localhost:5050   Panel: http://localhost:5050/interno (contrasena local: finex-demo)
-
-HOSTING GRATUITO (Render):
-  Build command:  pip install -r requirements.txt
-  Start command:  gunicorn server:app --workers 1 --threads 4 --timeout 120
-  Variables:      ANTHROPIC_API_KEY, FINEX_ADMIN_PASSWORD (elige una larga), FINEX_SECRET (cualquier texto largo)
-  No subas nunca la clave de API al repositorio: solo en las variables del hosting.
-
-Los anuncios publicados se guardan en data/anuncios.json, que el hosting gratuito borra al reiniciar.
-Para conservarlos: en /interno pulsa "Descargar copia" y guarda el fichero como data/seed_anuncios.json en el repositorio.
-Los rangos de rentabilidad (7-9 %, 9-12 %) y los umbrales de decision son supuestos de partida.
+1.⁠ ⁠Descripción del proyecto
+Finex es una plataforma digital que conecta a promotores de centros de datos con pequeños inversores, permitiéndoles participar en proyectos desde 1.000 €. Su objetivo es democratizar la inversión en infraestructuras digitales mediante un sistema accesible, transparente y con análisis de riesgos.
+2.⁠ ⁠Requisitos
+•⁠  ⁠Ordenador, tablet o móvil.
+•⁠  ⁠Conexión a Internet.
+•⁠  ⁠Navegador actualizado (Chrome, Safari o Firefox).
+3.⁠ ⁠Instalación y configuración
+No requiere instalación, ya que funciona desde el navegador. Basta con acceder a la plataforma y consultar sus diferentes apartados.
+4.⁠ ⁠Ejecución
+Una vez dentro, el usuario puede explorar la propuesta de Finex, conocer el problema que resuelve, consultar el funcionamiento del modelo de inversión y visualizar las oportunidades y sus características.
+5.⁠ ⁠Pruebas
+Se comprueba que la web carga correctamente, que los enlaces y apartados funcionan, que la información se muestra adecuadamente y que la plataforma se adapta a diferentes dispositivos. También se revisa que la navegación sea sencilla e intuitiva.
